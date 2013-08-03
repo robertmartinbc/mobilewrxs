@@ -1,9 +1,9 @@
 Mobilewrx::Application.routes.draw do
-  get "welcome/index"
+  resources :promotions
 
-  get "welcome/about"
+  match "about" => 'welcome#about', via: :get
 
-  root to: 'welcome#index'
+  root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
