@@ -14,7 +14,7 @@ class PromotionsController < ApplicationController
   end
 
   def create
-  @promotion = Promotion.new(params[:promotion])
+  @promotion = current_user.promotions.build(params[:promotion])
   if @promotion.save
     flash[:notice] = "Promotion was saved."
     redirect_to @promotion

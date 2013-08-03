@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130803044822) do
+ActiveRecord::Schema.define(:version => 20130803052850) do
 
   create_table "offers", :force => true do |t|
     t.text     "body"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(:version => 20130803044822) do
     t.float    "price"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
+
+  add_index "promotions", ["user_id"], :name => "index_promotions_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
