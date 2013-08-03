@@ -1,4 +1,6 @@
 Mobilewrx::Application.routes.draw do
+  devise_for :users
+
   resources :promotions
 
   match "about" => 'welcome#about', via: :get
