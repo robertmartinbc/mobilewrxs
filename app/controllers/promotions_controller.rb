@@ -11,10 +11,12 @@ class PromotionsController < ApplicationController
 
   def new
     @promotion = Promotion.new
+    authorize! :create, Promotion, message: "You need to be a customer to create a new promotion."
   end
 
   def create
   @promotion = current_user.promotions.build(params[:promotion])
+  authorize! :create, @promotion, message: "You need to be a customer to create a new promotion."
   if @promotion.save
     flash[:notice] = "Promotion was saved."
     redirect_to @promotion
@@ -26,10 +28,12 @@ end
 
   def edit
     @promotion = Promotion.find(params[:id])
+    authorize! :edit, @promotion, message: "You need to own the promotion to edit it."
   end
 
   def update
     @promotion = Promotion.find(params[:id])
+    authorize! :edit, @promotion, message: "You need to own the promotion to edit it."
     if @promotion.update_attributes(params[:post])
       flash[:notice] = "Promotion was updated."
       redirect_to @promotion
