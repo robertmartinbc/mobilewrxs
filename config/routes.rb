@@ -4,6 +4,7 @@ Mobilewrx::Application.routes.draw do
   resources :promotions
 
   match "about" => 'welcome#about', via: :get
+  match "promotions" => 'welcome#promotions', via: :get
 
   root :to => 'welcome#index'
 
