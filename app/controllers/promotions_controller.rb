@@ -1,6 +1,6 @@
 class PromotionsController < ApplicationController
   def index
-    @promotions = Promotion.all
+    @promotions = Promotion.paginate(page: params[:page], per_page: 8)
   end
 
   def show
