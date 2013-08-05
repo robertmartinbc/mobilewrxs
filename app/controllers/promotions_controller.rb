@@ -34,7 +34,7 @@ end
   def update
     @promotion = Promotion.find(params[:id])
     authorize! :edit, @promotion, message: "You need to own the promotion to edit it."
-    if @promotion.update_attributes(params[:post])
+    if @promotion.update_attributes(params[:promotion])
       flash[:notice] = "Promotion was updated."
       redirect_to @promotion
     else
