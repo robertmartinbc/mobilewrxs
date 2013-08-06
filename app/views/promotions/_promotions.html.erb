@@ -1,11 +1,11 @@
 <div class="media">
   
-  <%= link_to [post, post], class: 'pull-left' do %>
-    <%= image_tag(promotion.image.thumb.url) if post.image? %>
+  <%= link_to [promotion, promotion], class: 'pull-left' do %>
+    <%= image_tag(promotion.image.thumb.url) if promotion.image? %>
   <% end %>
   <div class="media-body">
     <h4 class="media-heading">
-      <%= link_to (promotion.title), [post, post] %>
+      <%= link_to (promotion.title), [promotion, promotion] %>
     </h4>
     <small>
       <%= image_tag(promotion.user.avatar.tiny.url) if promotion.user.avatar? %>

@@ -18,14 +18,27 @@
         </div>
       </div>
       <div class="control-group">
-        <%= f.label :body, class: 'control-label' %>
+        <%= f.label :description, class: 'control-label' %>
         <div class="controls">
-          <%= f.text_area :body, rows: 8 %>
+          <%= f.text_field :body %>
         </div>
+      </div>
         <div class="control-group">
         <%= f.label :price, class: 'control-label' %>
         <div class="controls">
           <%= f.text_field :price %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :website, class: 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :website %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :expiration, class: 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :expiration %>
         </div>
       </div>
       <div class="control-group">

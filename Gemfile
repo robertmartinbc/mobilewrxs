@@ -31,6 +31,8 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 3.5.0'
 gem 'fog', '~> 1.1.2'
 gem 'figaro'
+gem 'simple_form'
+gem 'country_select'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

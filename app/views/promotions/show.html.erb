@@ -1,15 +1,17 @@
-<h1><%= @promotion.title %></h1>
+<div class="thumbnail">
+<h3><%= @promotion.title %></h3>
 <div class="row">
-  <div class="span8">
-    <small>
-      <%= image_tag(@promotion.user.avatar.tiny.url) if @promotion.user.avatar? %>
-      submitted <%= time_ago_in_words(@promotion.created_at) %> ago by 
-      <%= @promotion.user.name %>
-    </small>    
+  
+  <div class="span4">
+    
+    <p><%= @promotion.body %></p>
+    <p><%= link_to @promotion.website %></p>
+    <p>Expires: <%= @promotion.expiration %></p>    
     
   </div>
+</div>
 </div>
 <% if can? :edit, @promotion %>
 <%= link_to "Edit", edit_promotion_path(@promotion), class: 'btn btn-mini' %>
 <% end %>
-<p><%= @promotion.body %></p>
+
