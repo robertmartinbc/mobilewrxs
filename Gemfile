@@ -29,7 +29,7 @@ gem 'cancan'
 gem 'will_paginate', '~> 3.0'
 gem 'carrierwave'
 gem 'mini_magick', '~> 3.5.0'
-gem 'fog', '~> 1.0.0'
+gem 'fog', '~> 1.1.2'
 gem 'figaro'
 
 # To use ActiveModel has_secure_password
