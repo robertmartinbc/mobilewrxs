@@ -1,4 +1,9 @@
 <h3>All Promotions</h3>
+<div>
+<% if can? :create, Promotion %>
+<%= link_to "New Promotion", new_promotion_path, class: 'btn btn-primary btn-mini' %>
+<% end %>
+</div>
 
 
 <div class="row">
