@@ -7,6 +7,8 @@ Mobilewrx::Application.routes.draw do
 
   resources :promotions
 
+  get "promotions/purchase"
+
   match "about" => 'welcome#about', via: :get
   match "promotions" => 'welcome#promotions', via: :get
   match "pricing" => 'welcome#pricing', via: :get

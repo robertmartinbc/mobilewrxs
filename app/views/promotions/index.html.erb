@@ -15,7 +15,7 @@
         <%= image_tag("lepiedsdanslo1.jpg") %>
           <p><%= link_to promotion.title, promotion %></p>
               <p><%= promotion.price %></p>
-                <p>Thumbnail caption...</p>
+                <img src="<%= qr_code(150, "http://mobilewrx.herokuapp.com") %>" />
                     <p></p>
                       <p><%= promotion.expiration %></p>                 
                         <p><a href="#" class="btn btn-small">Buy Now</a></p>

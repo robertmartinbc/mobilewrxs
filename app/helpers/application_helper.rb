@@ -8,4 +8,8 @@ module ApplicationHelper
     end
     super *[collection_or_options, options].compact
   end
+
+  def qr_code(size, url)
+  "https://chart.googleapis.com/chart?cht=qr&chs=#{size}x#{size}&chl=#{CGI.escape(url)}"
+  end
 end
