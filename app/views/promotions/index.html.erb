@@ -13,12 +13,15 @@
       <li class="span3">
         <div class="thumbnail">
         <%= image_tag("lepiedsdanslo1.jpg") %>
+        <center>
+          <br>
           <p><%= link_to promotion.title, promotion %></p>
               <p><%= promotion.price %></p>
-                <img src="<%= qr_code(150, "http://mobilewrx.herokuapp.com") %>" />
+                <img src="<%= qr_code(100, "http://mobilewrx.herokuapp.com") %>" />
                     <p></p>
                       <p><%= promotion.expiration %></p>                 
                         <p><a href="#" class="btn btn-small">Buy Now</a></p>
+                      </center>
                     </div>
              
   </li>
