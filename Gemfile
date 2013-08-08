@@ -33,6 +33,23 @@ gem 'fog', '~> 1.1.2'
 gem 'figaro'
 gem 'simple_form'
 gem 'country_select'
+gem 'rspec-rails'
+gem 'email_spec'
+gem 'cucumber-rails'
+gem 'database_cleaner'
+gem 'launchy'
+gem 'capybara'
+gem 'factory_girl_rails'
+gem 'rolify'
+gem 'quiet_assets'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'stripe'
+gem 'stripe_event'
+
+
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
